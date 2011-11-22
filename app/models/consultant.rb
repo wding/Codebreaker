@@ -8,4 +8,8 @@ class Consultant < ActiveRecord::Base
     end
   end
 
+  def all_skills
+    self.skills.collect(&:name) * ", "
+  end
+
 end
